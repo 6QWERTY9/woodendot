@@ -1,0 +1,25 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import svgr from 'vite-plugin-svgr'
+import path from 'path';
+
+// https://vite.dev/config/
+const projectRoot = path.resolve(__dirname, './');
+
+export default defineConfig({
+  plugins: [react(), svgr()],
+  resolve: {
+        alias: {
+            '@': path.resolve(projectRoot, 'src'),
+            // Алиасы для слоев FSD:
+            '@app': path.resolve(projectRoot, 'src/app'),
+            '@pages': path.resolve(projectRoot, 'src/pages'),
+            '@widgets': path.resolve(projectRoot, 'src/widgets'),
+            '@features': path.resolve(projectRoot, 'src/features'),
+            '@entities': path.resolve(projectRoot, 'src/entities'),
+            '@shared': path.resolve(projectRoot, 'src/shared'),
+            '@styles': path.resolve(projectRoot, 'src/shared/styles'),
+            '@assets': path.resolve(projectRoot, 'src/assets')
+        },
+    },
+})
