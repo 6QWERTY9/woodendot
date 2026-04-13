@@ -1,0 +1,24 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.navigation {
+    width: max-content;
+    height: 22px;
+    
+    .navigation__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 3rem;
+        padding-left: 0.3rem;
+        .navigation__list__items {
+            .navigation__list__items__link {
+                @include fontStyle($cardo-font, 1.8rem, 500);
+                line-height: 1;
+                letter-spacing: -0.1rem;
+                
+                
+            }
+        }
+    }
+}

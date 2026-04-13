@@ -1,11 +1,11 @@
-import ReactIcon from '@assets/react.svg?react';
+
+import { Header } from '@shared/components/Header';
 
 function App() {
 
   return (
     <>
-    woodendot
-    <ReactIcon/>
+    <Header/>
     </>
   )
 }
