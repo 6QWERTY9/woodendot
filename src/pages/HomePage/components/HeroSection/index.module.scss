@@ -1,0 +1,79 @@
+@use '@styles/mixins' as *;
+@use '@styles/vars' as *;
+
+.hero {
+    max-width: 1440px;
+    height:698px;
+    margin: 5.5rem auto 0;
+    
+    background-image: url('/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .hero__content {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hero__call_to_action_wrapper {
+            max-width: 807px;
+            height: 186px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+            
+            .hero__title {
+                @include fontStyle($roboto-font, 2.7rem, 700, #ffff);
+                line-height: 39px;
+                letter-spacing: 0.2px;
+                margin-bottom: 3.1rem;
+            }
+
+            .hero__btn {
+                width: 204px;
+                height: 33px;
+
+                background: none;
+                cursor: pointer;
+
+                border: 1px solid #000;
+
+                @include fontStyle($cardo-font, 2rem, 700, #ffff);
+                line-height: 20px;
+
+                transition: all 400ms ease-in-out;
+                
+
+
+                &:focus, &:hover {
+                    border: 1px solid #ffff;
+                    color: #000;
+                }
+            }
+        }
+
+        .hero__badge {
+            max-width: 324px;
+            height: 50px;
+
+            background: #000;
+            
+            position: absolute;
+            bottom: 0.3rem;
+            left: 2.5rem;
+            padding: 16px 30px 0px 30px;
+            .hero__badge_text {
+                @include fontStyle($cardo-font, 1.5rem, 400, #ffff);
+                line-height: 100%;
+            }
+        }
+    }
+}
